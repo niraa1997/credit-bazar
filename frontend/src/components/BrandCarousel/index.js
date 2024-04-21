@@ -23,7 +23,7 @@ const BrandCarousel = () => {
             <div className="profile-about">
               <div className="profile-heading">we’ve got your back.</div>
               <div className="profile-description">
-                gain complete control over your credit card with CRED Protect.
+                gain complete control over your credit card with CREDIT BAZAR Protect.
                 receive category-based analysis of your spends, detect hidden
                 charges, and track your credit limit in real-time.
               </div>
@@ -41,7 +41,7 @@ const BrandCarousel = () => {
               <div className="profile-heading">begin your winning streak.</div>
               <div className="profile-description">
                 use your CRED coins to participate in games and raffles to win
-                the most exclusive rewards and cashbacks on CRED. good luck.
+                the most exclusive rewards and cashbacks on CREDIT BAZAR. good luck.
               </div>
             </div>
           </div>

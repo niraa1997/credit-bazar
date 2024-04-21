@@ -175,7 +175,6 @@ module.exports = {
         res.status(200).send(newCard);
     },
     getAllCards: async(req, res) => {
-
         // we have to get cards associated with the current user.
         const userCards = await db.Profile.findAll({
             where: {
@@ -187,24 +186,26 @@ module.exports = {
             throw new Error(err);
         })
 
-
         let data = [];
-
-        for(const card of userCards[0].Cards) {
-            let outstandingAmount = await calculateOutstandingAmount(card.id);
-            
-            let originalCardNumber = await encryptDecrypt.decrypt(card.cardNumber)
-            let cardInfo = {
-                id: card.id,
-                cardOwnerName: card.cardOwnerName,
-                cardNumber: originalCardNumber,
-                expiryMonth: card.expiryMonth,
-                expiryYear: card.expiryYear,
-                outstandingAmount: outstandingAmount,
+        if (userCards.length > 0) {
+            for(const card of userCards[0].Cards) {
+                let outstandingAmount = await calculateOutstandingAmount(card.id);
+                
+                let originalCardNumber = await encryptDecrypt.decrypt(card.cardNumber)
+                let cardInfo = {
+                    id: card.id,
+                    cardOwnerName: card.cardOwnerName,
+                    cardNumber: originalCardNumber,
+                    expiryMonth: card.expiryMonth,
+                    expiryYear: card.expiryYear,
+                    outstandingAmount: outstandingAmount,
+                }
+                data.push(cardInfo);
             }
-            data.push(cardInfo);
+            res.send(data);
+        } else {
+            res.send(data);
         }
-        res.send(data);
     },
     getCardById: async(req, res) => {
 

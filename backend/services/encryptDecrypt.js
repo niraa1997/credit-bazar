@@ -3,6 +3,7 @@ const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY;
 const IV_LENGTH = 16;
 
 const encrypt = (text) => {
+    console.log('text ', text)
     let iv = crypto.randomBytes(IV_LENGTH);
     let cipher = crypto.createCipheriv('aes-256-cbc', new Buffer.from(ENCRYPTION_KEY), iv);
     let encrypted = cipher.update(text);

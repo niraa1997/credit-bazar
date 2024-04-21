@@ -47,10 +47,16 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <Image
+            <h3
+                    className="text-muted mb-md-0 mb-5 bold-text"
+                    style={{ fontSize: '2rem' }}
+                  >
+                    CREDIT BAZAR
+                  </h3>
+              {/* <Image
                 style={{ width: '40%', height: 'auto' }}
                 src="/images/cred-logo.png"
-              />
+              /> */}
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,4 +1,4 @@
-const jwt = require('express-jwt');
+const { expressjwt: jwt } = require('express-jwt');
 const db = require('../models');
 
 
@@ -13,7 +13,8 @@ const verifyToken = () => {
         // attach full user record to request object 
         async(req, res, next) => {
             // get user with id from token 'sub' (subject) property
-            const user = await db.User.findByPk(req.user.sub);
+            const { auth: { sub, iat, exp } } = req
+            const user = await db.User.findByPk(sub);
 
             // check if user exists
             if(!user) {

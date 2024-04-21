@@ -5,7 +5,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config();
 const morgan = require('morgan');
-const reminder = require('./reminder');
+// const reminder = require('./reminder');
 const swaggerUi = require('swagger-ui-express')
 const swaggerDocument = require('./swagger.json');
 
@@ -45,7 +45,7 @@ app.use((req, res) => {
 // Error Handler
 app.use(errorHandler);
 
-reminder();
+// reminder();
 
 
 

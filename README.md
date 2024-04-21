@@ -1,5 +1,5 @@
-# CRED-T8
-Team ID: CRED-T8 | Team Members: Narendra Manglani &amp; Abhishek Ranjan
+# CREDIT BAZAR
+Team ID: CREDIT BAZAR | Team Members: Narendra Manglani &amp; Abhishek Ranjan
 
 ---
 
@@ -28,15 +28,6 @@ As an externship program we had provided a project to make a Credit Card Managem
 
 ---
 
-### Demo
-
-Below is a demo of final project.
-
-- [Demo Link](https://www.youtube.com/watch?v=3rGtfzDxl0A)
-
-- GIF  <br/> <br/> ![](./assets/demo.gif)
-
----
 
 ### Features
 
@@ -69,11 +60,9 @@ Below is a demo of final project.
 
 ### How To Get Started
 
-1. Clone the repository
+1. ``` cd backend ``` and create a folder named ```config```. Inside that folder make a file named ``` config.json ```
 
-2. ``` cd backend ``` and create a folder named ```config```. Inside that folder make a file named ``` config.json ```
-
-3. Content of ``` config.json ``` should be similar to this.
+2. Content of ``` config.json ``` should be similar to this.
 > Note: We are using mysql as a dialect(for storing data). You can use any dialect like Postgress, MariaDB, SQLite and Microsoft SQL Server. But you have to change ```config.json``` accordingly.
 
 ```json
@@ -134,22 +123,11 @@ npm run dev - to run server and client concurrently
 npm run server - to run server standalone
 npm run client - to run client standalone.
 ```
-
 ---
 
-### Deployed Links
-
-- Web Application
-    - [Link](https://cred-t8.netlify.app/)
-- Android APK
-    - [Link](https://drive.google.com/file/d/1oxP7BQGEgGeFnLBS8aiM3V_DLA0UQnCK/view?usp=sharing)
-- Demo Account
-    - email: ```cadel21249@vreagles.com```
-    - password: ```Temp@123```
-
----
+Backend -  npm run server
+Frontend -   npm start
 
 ### Developed By
 
- - [Abhishek Ranjan](https://www.github.com/arabhiar)
- - [Narendra Manglani](https://github.com/ishuu7)
+ - [Nikita Pawar]
